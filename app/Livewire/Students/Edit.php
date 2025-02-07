@@ -13,9 +13,9 @@ class Edit extends Component
     public StudentsForm $form;
 
 
-    public function mount(Students $data, $fields)
+    public function mount(Students $data, $fields, $action)
     {
-        $this->action = 'update';
+        $this->action = $action;
         $this->fields = $fields;
         $this->form->setForm($data);
     }

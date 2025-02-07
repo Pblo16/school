@@ -11,9 +11,9 @@ class Create extends Component
     use FormTrait;
     public ProfessorsForm $form;
 
-    public function mount($fields)
+    public function mount($fields, $action)
     {
-        $this->action = 'store';
+        $this->action = $action;
         $this->fields = $fields;
     }
 

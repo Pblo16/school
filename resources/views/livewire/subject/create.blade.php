@@ -1,3 +1,7 @@
-<div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-</div>
+<x-form.ui.layout :fields="$fields" :action="$action" :descriptionTooltip="$descriptionTooltip ?? ''">
+
+    <x-slot:title>
+        {{ __('Registrar Materia') }}
+    </x-slot:title>
+
+</x-form.ui.layout>

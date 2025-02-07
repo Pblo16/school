@@ -1,3 +1,9 @@
-<div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
-</div>
+<x-form.ui.layout :fields="$fields" :action="$action" :descriptionTooltip="$descriptionTooltip ?? ''">
+
+    <x-slot:title>
+        {{ __('Editar Materia') }}
+    </x-slot:title>
+
+
+
+</x-form.ui.layout>

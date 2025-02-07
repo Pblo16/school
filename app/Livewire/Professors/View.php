@@ -67,6 +67,7 @@ class View extends Component
             ['key' => 'nombre', 'label' => 'Nombre', 'searchable' => true],
             ['key' => 'email', 'label' => 'Correo', 'searchable' => true],
         ];
+        $this->title = 'Profesores';
 
         $this->searchable = collect($this->headers)
             ->where('searchable', true)

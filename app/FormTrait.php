@@ -15,7 +15,7 @@ trait FormTrait
     {
         $this->validate();
         try {
-            if ($this->action == 'store') {
+            if ($this->action == 'create') {
                 $this->form->store();
             } else {
                 $this->form->update();
