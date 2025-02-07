@@ -23,13 +23,16 @@ Make sure you have the following installed:
 ### Setup Instructions
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
-   cd <project-folder>
+   git clone [<repository-url>](https://github.com/Pblo16/school.git)
+   cd school
    ```
 
 2. **Install dependencies:**
    ```sh
    composer install
+   ```
+   ```
+   npm install
    ```
 
 3. **Copy the environment file:**
