@@ -53,6 +53,9 @@ Make sure you have the following installed:
    ```sh
    php artisan serve
    ```
+   ```sh
+   pnpm run dev
+   ```
 
 ## Default User Credentials
 After running `php artisan app:start`, you can log in with the following test credentials:
