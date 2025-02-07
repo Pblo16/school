@@ -23,7 +23,7 @@ Make sure you have the following installed:
 ### Setup Instructions
 1. **Clone the repository:**
    ```sh
-   git clone [<repository-url>](https://github.com/Pblo16/school.git)
+   git clone (https://github.com/Pblo16/school.git)
    cd school
    ```
 
