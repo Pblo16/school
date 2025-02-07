@@ -1,7 +1,6 @@
 <layout-view.blade>
     @if($action === 'edit')
-    {{-- removed @dd($id) --}}
-    <livewire:students.edit :action="$action" :data="$id" :fields="$fields" />
+7    <livewire:students.edit :action="$action" :data="$id" :fields="$fields" />
     @elseif($action === 'create')
     <livewire:students.create :action="$action" :fields="$fields" />
     @else

@@ -13,11 +13,14 @@ class SubjectForm extends Form
 
     #[Validate('required|max:13')]
     public $nombre = '';
+    #[Validate('required')]
+    public $professor_id;
 
     public function setForm(Subject $data)
     {
         $this->data = $data;
         $this->nombre = $data->nombre;
+        $this->professor_id = $data->professor_id;
     }
 
     public function store()

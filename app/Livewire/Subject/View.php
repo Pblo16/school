@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Subject;
 
+use App\Models\Subject;
 use App\Services\SubjectService;
 use App\WithDataTable;
 use Livewire\Component;
@@ -15,6 +16,14 @@ class View extends Component
             'model' => 'nombre',
             'placeholder' => 'Ingresar el nombre',
             'span' => 4,
+        ],
+        'professor_id' => [
+            'label' => 'Profesor',
+            'model' => 'professor_id',
+            'placeholder' => 'Ingresar el profesor',
+            'span' => 4,
+            'type' => 'select',
+            'apiroute' => 'api.professors',
         ],
     ];
 
@@ -43,12 +52,14 @@ class View extends Component
 
     public function edit($id)
     {
-        session(['id' => $id]);
+        $subject = Subject::with('professor')->findOrFail($id);
+        session(['id' => $subject]);
         return $this->redirectRoute('subject', ['action' => 'edit'], navigate: true);
     }
+
     public function render()
     {
-        return view('livewire.subject.view',[
+        return view('livewire.subject.view', [
             'data' => $this->service->getAll(
                 $this->perPage,
                 $this->search,

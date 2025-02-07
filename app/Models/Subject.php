@@ -11,5 +11,11 @@ class Subject extends Model
     use HasFactory;
     protected $fillable = [
         'nombre',
+        'professor_id'
     ];
+
+    public function professor()
+    {
+        return $this->belongsTo(Professors::class);
+    }
 }

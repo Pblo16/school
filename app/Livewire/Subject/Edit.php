@@ -12,14 +12,13 @@ class Edit extends Component
     use FormTrait;
     public SubjectForm $form;
 
-
     public function mount(Subject $data, $fields, $action)
     {
+        $this->form->setForm($data);
         $this->action = $action;
         $this->fields = $fields;
-        $this->form->setForm($data);
     }
-    
+
     public function render()
     {
         return view('livewire.subject.edit');
