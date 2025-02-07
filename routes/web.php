@@ -6,7 +6,7 @@ use App\Livewire\Students\View as Students;
 use App\Livewire\Subject\View as Subject;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Route::middleware([

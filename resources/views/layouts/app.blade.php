@@ -22,6 +22,7 @@
     <x-notifications z-index="z-50" position="bottom-end" />
     @endpersist
     <x-dialog z-index="z-50" blur="md" align="center" />
+    <x-navigation.header />
     <!-- Page Content -->
     <main class="mt-4 max-w-7xl mx-auto">
         {{ $slot }}
