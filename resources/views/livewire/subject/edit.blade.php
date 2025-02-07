@@ -4,6 +4,4 @@
         {{ __('Editar Materia') }}
     </x-slot:title>
 
-
-
 </x-form.ui.layout>

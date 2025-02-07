@@ -4,5 +4,4 @@
         {{ __('Registrar Alumno') }}
     </x-slot:title>
 
-
 </x-form.ui.layout>

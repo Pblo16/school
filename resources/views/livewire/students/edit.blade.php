@@ -4,5 +4,4 @@
         {{ __('Editar Alumno') }}
     </x-slot:title>
 
-
 </x-form.ui.layout>

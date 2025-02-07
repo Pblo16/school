@@ -4,5 +4,4 @@
         {{ __('Registrar Profesor') }}
     </x-slot:title>
 
-
 </x-form.ui.layout>
