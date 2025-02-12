@@ -13,6 +13,7 @@ class SubjectForm extends Form
 
     #[Validate('required|max:13')]
     public $nombre = '';
+
     #[Validate('required')]
     public $professor_id;
 

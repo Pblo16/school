@@ -9,9 +9,10 @@ class Subject extends Model
 {
     //
     use HasFactory;
+
     protected $fillable = [
         'nombre',
-        'professor_id'
+        'professor_id',
     ];
 
     public function professor()

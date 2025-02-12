@@ -9,6 +9,7 @@ use Livewire\Component;
 class Create extends Component
 {
     use FormTrait;
+
     public StudentsForm $form;
 
     public function mount($fields, $action)

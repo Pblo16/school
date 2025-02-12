@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Artisan;
 
 class ComponentCreate extends Command
 {
@@ -28,7 +28,7 @@ class ComponentCreate extends Command
     public function handle()
     {
         $name = $this->argument('name');
-        $filesystem = new Filesystem();
+        $filesystem = new Filesystem;
 
         // Create model with migration
         Artisan::call("make:model {$name} -m");

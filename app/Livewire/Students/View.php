@@ -9,6 +9,7 @@ use Livewire\Component;
 class View extends Component
 {
     use WithDataTable;
+
     public $fields = [
         'nombre' => [
             'label' => 'Nombre',
@@ -44,7 +45,7 @@ class View extends Component
             'onedit' => [
                 'disabled' => true,
                 'hidden' => true,
-            ]
+            ],
         ],
         'fecha' => [
             'type' => 'date',
@@ -83,9 +84,9 @@ class View extends Component
     public function edit($id)
     {
         session(['id' => $id]);
+
         return $this->redirectRoute('students', ['action' => 'edit'], navigate: true);
     }
-
 
     public function render()
     {

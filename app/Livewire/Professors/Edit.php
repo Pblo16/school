@@ -4,14 +4,14 @@ namespace App\Livewire\Professors;
 
 use App\FormTrait;
 use App\Livewire\Forms\ProfessorsForm;
-use Livewire\Component;
 use App\Models\Professors;
+use Livewire\Component;
 
 class Edit extends Component
 {
     use FormTrait;
-    public ProfessorsForm $form;
 
+    public ProfessorsForm $form;
 
     public function mount(Professors $data, $fields, $action)
     {

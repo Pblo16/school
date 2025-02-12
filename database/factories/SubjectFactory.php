@@ -34,7 +34,7 @@ class SubjectFactory extends Factory
             'Sociología',
             'Derecho',
             'Idiomas',
-            'Ciencias Ambientales'
+            'Ciencias Ambientales',
         ];
 
         return [

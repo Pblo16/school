@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Livewire\Professors\View as Professors;
 use App\Livewire\Students\View as Students;
 use App\Livewire\Subject\View as Subject;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/login');

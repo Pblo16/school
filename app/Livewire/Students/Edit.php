@@ -10,8 +10,8 @@ use Livewire\Component;
 class Edit extends Component
 {
     use FormTrait;
-    public StudentsForm $form;
 
+    public StudentsForm $form;
 
     public function mount(Students $data, $fields, $action)
     {

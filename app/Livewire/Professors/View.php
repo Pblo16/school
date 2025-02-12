@@ -9,6 +9,7 @@ use Livewire\Component;
 class View extends Component
 {
     use WithDataTable;
+
     public $fields = [
         'nombre' => [
             'label' => 'Nombre',
@@ -44,7 +45,7 @@ class View extends Component
             'onedit' => [
                 'disabled' => true,
                 'hidden' => true,
-            ]
+            ],
         ],
         'fecha' => [
             'type' => 'date',
@@ -62,28 +63,13 @@ class View extends Component
 
     public function mount()
     {
-        $this->id = session('id');
         $this->headers = [
             ['key' => 'nombre', 'label' => 'Nombre', 'searchable' => true],
             ['key' => 'email', 'label' => 'Correo', 'searchable' => true],
         ];
         $this->title = 'Profesores';
-
-        $this->searchable = collect($this->headers)
-            ->where('searchable', true)
-            ->pluck('key')
-            ->toArray();
-    }
-
-    public function create()
-    {
-        return $this->redirectRoute('professors', ['action' => 'create'], navigate: true);
-    }
-
-    public function edit($id)
-    {
-        session(['id' => $id]);
-        return $this->redirectRoute('professors', ['action' => 'edit'], navigate: true);
+        $this->initializeDataTable();
+        $this->route = 'professors';
     }
 
     public function render()

@@ -9,6 +9,7 @@ trait FormTrait
     use WireUiActions;
 
     public $fields;
+
     public $action;
 
     public function save()
@@ -29,6 +30,7 @@ trait FormTrait
                 'description' => 'Esto es una descripcion',
 
             ]);
+
             return $this->cancel();
         } catch (\Exception $th) {
             $this->notification()->send([
@@ -37,7 +39,7 @@ trait FormTrait
 
                 'title' => 'Notificacion de error!',
 
-                'description' =>  $th,
+                'description' => $th,
 
             ]);
         }

@@ -14,9 +14,9 @@ class StudentsService
         return Students::destroy($id);
     }
 
-    public function getAll($perPage, $search = '', $searchable)
+    public function getAll($perPage, $search, $searchable)
     {
-        return  Students::query()
+        return Students::query()
             ->where(function ($query) use ($search, $searchable) {
                 foreach ($searchable as $index => $field) {
                     if ($index === 0) {
@@ -34,6 +34,7 @@ class StudentsService
             ->through(function ($data) {
                 $data->can_edit = true;
                 $data->can_delete = true;
+
                 return $data;
             });
     }

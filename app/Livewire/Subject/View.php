@@ -10,6 +10,7 @@ use Livewire\Component;
 class View extends Component
 {
     use WithDataTable;
+
     public $fields = [
         'nombre' => [
             'label' => 'Nombre',
@@ -54,6 +55,7 @@ class View extends Component
     {
         $subject = Subject::with('professor')->findOrFail($id);
         session(['id' => $subject]);
+
         return $this->redirectRoute('subject', ['action' => 'edit'], navigate: true);
     }
 

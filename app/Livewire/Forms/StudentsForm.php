@@ -12,14 +12,19 @@ class StudentsForm extends Form
 
     #[Validate('required|max:13')]
     public $nombre = '';
+
     #[Validate('required|max:13')]
     public $apellido_paterno = '';
+
     #[Validate('required|max:13')]
     public $apellido_materno = '';
+
     #[Validate('required|email')]
     public $email = '';
+
     #[Validate('required|min:8')]
     public $password = '';
+
     #[Validate('required')]
     public $fecha = '';
     /* #[Validate('required')]

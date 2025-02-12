@@ -7,20 +7,33 @@ use WireUi\Traits\WireUiActions;
 
 trait WithDataTable
 {
-    use WithPagination;
     use WireUiActions;
+    use WithPagination;
 
     protected $paginationTheme = 'tailwind';
+
     protected $service;
+
     public $headers;
+
     public $policy;
+
     public $perPage = 10; // Default value
+
     public $actions = [];
+
     public $title;
+
     public $search = '';
+
     public $searchable = [];
+
     public $action = '';
+
     public $id = '';
+
+    public $route;
+
     public function updatedPerPage($value)
     {
         $this->resetPage();
@@ -33,10 +46,14 @@ trait WithDataTable
         }
     }
 
-    public function initializeDataTable($headers, $policy)
+    public function initializeDataTable()
     {
-        $this->headers = $headers;
-        $this->policy = $policy;
+        $this->id = session('id');
+
+        $this->searchable = collect($this->headers)
+            ->where('searchable', true)
+            ->pluck('key')
+            ->toArray();
     }
 
     public function delete($id): void
@@ -49,6 +66,18 @@ trait WithDataTable
             'method' => 'handleDelete',
             'params' => $id,
         ]);
+    }
+
+    public function create()
+    {
+        return $this->redirectRoute($this->route, ['action' => 'create'], navigate: true);
+    }
+
+    public function edit($id)
+    {
+        session(['id' => $id]);
+
+        return $this->redirectRoute($this->route, ['action' => 'edit'], navigate: true);
     }
 
     public function handleDelete($id)

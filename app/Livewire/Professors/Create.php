@@ -3,12 +3,13 @@
 namespace App\Livewire\Professors;
 
 use App\FormTrait;
-use Livewire\Component;
 use App\Livewire\Forms\ProfessorsForm;
+use Livewire\Component;
 
 class Create extends Component
 {
     use FormTrait;
+
     public ProfessorsForm $form;
 
     public function mount($fields, $action)
@@ -16,7 +17,6 @@ class Create extends Component
         $this->action = $action;
         $this->fields = $fields;
     }
-
 
     public function render()
     {

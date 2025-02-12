@@ -34,7 +34,6 @@ class Start extends Command
         $this->info('Seeding database...');
         $this->call('db:seed');
 
-
         $this->info('Application setup completed successfully!');
     }
 }
